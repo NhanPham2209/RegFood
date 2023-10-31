@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from html.themefax.com/regfood/cart_view.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 26 Jul 2023 08:06:14 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi" />
+    <title>RegFood || Restaurant HTML Template</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/venobox.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/jquery.exzoom.css">
+
+    <link rel="stylesheet" href="css/spacing.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <!--=============================
+        TOPBAR START
+    ==============================-->
+    <section class="tf__topbar">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-sm-6 col-md-8">
+                    <ul class="tf__topbar_info d-flex flex-wrap d-none d-sm-flex">
+                        <li><a href="mailto:example@gmail.com"><i class="fas fa-envelope"></i> examplemail@gmail.com</a>
+                        </li>
+                        <li class="d-none d-md-block"><a href="callto:123456789"><i class="fas fa-phone-alt"></i>
+                                +96487452145214</a></li>
+                    </ul>
+                </div>
+                <div class="col-xl-6 col-sm-6 col-md-4">
+                    <ul class="topbar_icon d-flex flex-wrap">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a> </li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a> </li>
+                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a> </li>
+                        <li><a href="#"><i class="fab fa-behance"></i></a> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--=============================
+        TOPBAR END
+    ==============================-->
+
+
+    <!--=============================
+        MENU START
+    ==============================-->
+    <nav class="navbar navbar-expand-lg main_menu">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="RegFood" class="img-fluid">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="far fa-bars menu_icon_bar"></i>
+                <i class="far fa-times close_icon_close"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav m-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">about</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">menu</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link" href="blogs.html">blog</a>
+                    </li>
+                </ul>
+                <ul class="menu_icon d-flex flex-wrap">
+                    <li>
+                        <a class="cart_icon" href="cart_view.html"><i class="fas fa-shopping-basket"></i>
+                            <span id="cart_view_quantity"></span></a>
+                    </li>
+                    <li>
+                        <a href="dashboard.html"><i class="fas fa-user"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--=============================
+        MENU END
+    ==============================-->
+
+
+    <!--=============================
+        BREADCRUMB START
+    ==============================-->
+    <section class="tf__breadcrumb" style="background: url(images/counter_bg.jpg);">
+        <div class="tf__breadcrumb_overlay">
+            <div class="container">
+                <div class="tf__breadcrumb_text">
+                    <h1>cart view</h1>
+                    <ul>
+                        <li><a href="index.html">home</a></li>
+                        <li><a href="#">cart view</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--=============================
+        BREADCRUMB END
+    ==============================-->
+
+
+    <!--============================
+        CART VIEW START
+    ==============================-->
+    <section class="tf__cart_view mt_100 xs_mt_70 mb_100 xs_mb_70">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 wow fadeInUp" data-wow-duration="1s">
+                    <div class="tf__cart_list">
+                        <div class="table-responsive" >
+                            <table>
+                                <tbody id="cart-table">
+                                    <tr>
+                                        <th class="tf__pro_img">
+                                            Image
+                                        </th>
+
+                                        <th class="tf__pro_name">
+                                            details
+                                        </th>
+
+                                        <th class="tf__pro_status">
+                                            price
+                                        </th>
+
+                                        <th class="tf__pro_select">
+                                            quantity
+                                        </th>
+
+                                        <th class="tf__pro_tk">
+                                            total
+                                        </th>
+
+                                        <th class="tf__pro_icon">
+                                            <a class="clear_all" href="#">clear all</a>
+                                        </th>
+                                    </tr>
+                                    
+                                   
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 wow fadeInUp" data-wow-duration="1s">
+                    <div class="tf__cart_list_footer_button mt_50">
+                        <div class="row">
+                            <div class="col-xl-7 col-md-6">
+                                <div class="tf__cart_list_footer_button_img">
+                                    <img src="images/cart_offer_img.jpg" alt="cart offer" class="img-fluid w-100">
+                                </div>
+                            </div>
+                            <div class="col-xl-5 col-md-6">
+                                <div class="tf__cart_list_footer_button_text">
+                                    <h6 id="total-quantity">total cart</h6>
+                                    <p>subtotal: <span id="total-money"></span></p>
+                                    <p>discount: <span>$10.00</span></p>
+                                    <form>
+                                        <select class="form-control " id="promotionInput" style="text-align: right;" >
+                                            <!-- <option selected value="null">appropriate discount code</option> -->
+                                          </select>
+                                        
+                                    </form>
+                                    <p class="total"><span>total:</span> <span id="bill-money">Total Bill</span></p>
+                                    <a class="common_btn" href="#" id="checkout">checkout</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--============================
+        CART VIEW END
+    ==============================-->
+
+
+    <!--=============================
+        FOOTER START
+    ==============================-->
+    <footer style="background: url(images/footer_bg.jpg);">
+        <div class="footer_overlay pt_100 xs_pt_70 pb_100 xs_pb_20">
+            <div class="container wow fadeInUp" data-wow-duration="1s">
+                <div class="row justify-content-between">
+                    <div class="col-xxl-4 col-lg-4 col-sm-9 col-md-7">
+                        <div class="tf__footer_content">
+                            <a class="footer_logo" href="index.html">
+                                <img src="images/footer_logo.png" alt="RegFood" class="img-fluid w-100">
+                            </a>
+                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta facere delectus qui
+                                placeat inventore consectetur repellendus optio debitis.</span>
+                            <ul class="social_link d-flex flex-wrap">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-behance"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xxl-2 col-lg-2 col-sm-5 col-md-5">
+                        <div class="tf__footer_content">
+                            <h3>Short Link</h3>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="#">Our Service</a></li>
+                                <li><a href="#">gallery</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xxl-2 col-lg-2 col-sm-6 col-md-5 order-md-4">
+                        <div class="tf__footer_content">
+                            <h3>Help Link</h3>
+                            <ul>
+                                <li><a href="#">Terms & Conditions</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Refund Policy</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xxl-3 col-lg-4 col-sm-9 col-md-7 order-lg-4">
+                        <div class="tf__footer_content">
+                            <h3>contact us</h3>
+                            <p class="info"><i class="fas fa-phone-alt"></i> +44 (0) 20 9994 7740</p>
+                            <p class="info"><i class="fas fa-envelope"></i> themefaxbd@gmail.com</p>
+                            <p class="info"><i class="far fa-map-marker-alt"></i> Blackwell Street,Dry Creek,Alaska</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tf__footer_bottom d-flex flex-wrap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="tf__footer_bottom_text">
+                            <p>Copyright ©<b> RegFood</b> 2023. All Rights Reserved</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--=============================
+        FOOTER END
+    ==============================-->
+
+
+    <!--=============================
+        SCROLL BUTTON START
+    ==============================-->
+    <div class="tf__scroll_btn"><i class="fas fa-hand-pointer"></i></div>
+    <!--=============================
+        SCROLL BUTTON END 
+    ==============================-->
+
+
+    <!--jquery library js-->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!--bootstrap js-->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!--font-awesome js-->
+    <script src="js/Font-Awesome.js"></script>
+    <!-- slick slider -->
+    <script src="js/slick.min.js"></script>
+    <!-- isotop js -->
+    <script src="js/isotope.pkgd.min.js"></script>
+    <!-- counter up js -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.countup.min.js"></script>
+    <!-- nice select js -->
+    <script src="js/jquery.nice-select.min.js"></script>
+    <!-- venobox js -->
+    <script src="js/venobox.min.js"></script>
+    <!-- sticky sidebar js -->
+    <script src="js/sticky_sidebar.js"></script>
+    <!-- wow js -->
+    <script src="js/wow.min.js"></script>
+    <!-- ex zoom js -->
+    <script src="js/jquery.exzoom.js"></script>
+
+    <!--main/custom js-->
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+</body>
+
+
+<!-- Mirrored from html.themefax.com/regfood/cart_view.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 26 Jul 2023 08:06:14 GMT -->
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Radio Input Alert</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <form id="myForm">
+    <label>
+      <input type="radio" name="gender" value="male"> Male
+    </label>
+    <label>
+      <input type="radio" name="gender" value="female"> Female
+    </label>
+    <label>
+      <input type="radio" name="gender" value="other"> Other
+    </label>
+    <input type="text" id="textInput" placeholder="Nhập giá trị...">
+<div id="result"></div>
+  </form>
+
+  <script>
+    $(document).ready(function () {
+      // Bắt sự kiện change trên tất cả các radio input có name="gender"
+      $("input[name='gender']").change(function () {
+        // Lấy giá trị của radio input được chọn
+        const selectedGender = $("input[name='gender']:checked").val();
+
+        if (selectedGender) {
+          // Hiển thị giá trị đã chọn trong một cửa sổ alert
+          alert("Giới tính đã chọn: " + selectedGender);
+        }
+      });
+      $("#textInput").on("input", function () {
+    const inputValue = $(this).val();
+    $("#result").text("Giá trị đã nhập: " + inputValue);
+  });
+    });
+  </script>
+</body>
+</html>

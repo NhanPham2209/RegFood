@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chọn Option và Hiện/Ẩn Button</title>
+</head>
+<body>
+    <label for="optionSelect">Chọn một tùy chọn:</label>
+    <select id="optionSelect">
+        <option value="0">0</option>
+        <option value="1">1</option>
+    </select>
+
+    <div id="buttonDiv">
+        <button id="editButton">Sửa</button>
+    </div>
+
+    <script>
+        const selectElement = document.getElementById('optionSelect');
+        const buttonDiv = document.getElementById('buttonDiv');
+        const editButton = document.getElementById('editButton');
+
+        selectElement.addEventListener('change', function () {
+            if (selectElement.value === '0') {
+                // Nếu giá trị là 0, ẩn nút "Sửa"
+                buttonDiv.style.display = 'none';
+            } else if (selectElement.value === '1') {
+                // Nếu giá trị là 1, hiển thị nút "Sửa"
+                buttonDiv.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
